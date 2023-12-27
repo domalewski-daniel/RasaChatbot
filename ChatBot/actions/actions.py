@@ -25,3 +25,31 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+
+from rasa_sdk import Action
+from rasa_sdk.events import SlotSet
+
+class ActionRecommendDoctor(Action):
+    def name(self):
+        return "action_recommend_doctor"
+
+    def run(self, dispatcher, tracker, domain):
+        symptoms = tracker.get_slot('symptom')
+
+
+        doctor_mapping = {
+            "internisty": ["kaszel", "gorączka"],
+            "neurologa": ["ból głowy", "zawroty"],
+            "gastrologa": ["ból brzucha", "nudności"],
+
+        }
+
+
+        recommended_doctor = "lekarza ogólnego"
+        for doctor, doctor_symptoms in doctor_mapping.items():
+            if any(symptom in symptoms for symptom in doctor_symptoms):
+                recommended_doctor = doctor
+                break
+
+        dispatcher.utter_message(text=f"Ojej, wygląda na to, że powinieneś zapisać się do {recommended_doctor}")
+        return []

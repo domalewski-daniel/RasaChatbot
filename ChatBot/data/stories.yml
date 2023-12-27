@@ -34,3 +34,9 @@ stories:
   - intent: thank
   - action: utter_thanks
 
+- story: Zgłoszenie choroby i opisanie objawów
+  steps:
+  - intent: greet
+  - action: utter_ask_symptoms
+  - intent: describe_symptoms
+  - action: action_recommend_doctor

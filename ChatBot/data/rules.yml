@@ -7,7 +7,17 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
+- rule: Pytanie o objawy po zgłoszeniu choroby
+  steps:
+  - intent: report_sickness
+  - action: utter_ask_symptoms
+
 - rule: Say 'Jestem botem' anytime the user challenges
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Rekomendacja lekarza
+  steps:
+  - intent: describe_symptoms
+  - action: action_recommend_doctor

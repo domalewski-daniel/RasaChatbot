@@ -11,7 +11,7 @@ nlu:
     - Dobry wieczór
     - siema
     - No hej
-    - chodźmy
+    - Mów co Ci leży na wątrobie
     - hej, koleś
     - Dzień dobry
     - Dobry wieczór
@@ -95,3 +95,20 @@ nlu:
     - dzieki
     - z przyjemnością
     - pewnie
+- intent: greet
+  examples: |
+    - Witaj
+    - Dzień dobry
+    - Hej
+
+- intent: report_sickness
+  examples: |
+    - jestem chory
+    - czuję się źle
+    - mam problemy ze zdrowiem
+
+- intent: describe_symptoms
+  examples: |
+    - mam [kaszel](symptom) i [gorączkę](symptom)
+    - boli mnie [głowa](symptom) i mam [zawroty](symptom)
+    - odczuwam [ból brzucha](symptom) i [nudności](symptom)
