@@ -8,26 +8,27 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - thank
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Siema, jak sie czujesz bracie?"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
+  - text: "Może to pomoże?"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "Czy to pomogło?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Dobrze, trzymaj sie!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Nara"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Jestem botem, stworzonym przez zespół R na zaliczenie zajęć."
 
 session_config:
   session_expiration_time: 60
